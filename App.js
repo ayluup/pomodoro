@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { StyleSheet, Text, TouchableOpacity, SafeAreaView, View } from 'react-native';
 import { Audio } from 'expo-av';
 import Tabs from './src/components/Tabs';
-import Timer from './src/components/timer'; 
+import Timer from './src/components/Timer'; 
 import { MODES, COLORS } from './src/components/utils/constants';
 
 export default function App() {
