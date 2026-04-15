@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { COLORS } from './utils/constants';
 
-export default function Timer({ time }) {
+export default function Timer({ time, isAlarmPlaying }) {
   const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
     const secs = (seconds % 60).toString().padStart(2, '0');
@@ -10,7 +10,12 @@ export default function Timer({ time }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.timeText}>{formatTime(time)}</Text>
+      <Text style={[
+        styles.timeText, 
+        isAlarmPlaying && { color: 'white' }
+      ]}>
+        {formatTime(time)}
+      </Text>
     </View>
   );
 }
